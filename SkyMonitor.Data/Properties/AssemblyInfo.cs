@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SkyMonitor.Model")]
+[assembly: AssemblyTitle("SkyMonitor.Data")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SkyMonitor.Model")]
+[assembly: AssemblyProduct("SkyMonitor.Data")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("f9c91bf9-da22-4edd-a8d2-da3a21637668")]
+[assembly: Guid("b8aa961d-e38a-4391-a047-c8172d77d5e2")]
 
 // Version information for an assembly consists of the following four values:
 //

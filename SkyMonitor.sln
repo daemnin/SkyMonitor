@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyMonitor.Model", "SkyMonitor.Model\SkyMonitor.Model.csproj", "{F9C91BF9-DA22-4EDD-A8D2-DA3A21637668}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyMonitor.Data", "SkyMonitor.Data\SkyMonitor.Data.csproj", "{B8AA961D-E38A-4391-A047-C8172D77D5E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F9C91BF9-DA22-4EDD-A8D2-DA3A21637668}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9C91BF9-DA22-4EDD-A8D2-DA3A21637668}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9C91BF9-DA22-4EDD-A8D2-DA3A21637668}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8AA961D-E38A-4391-A047-C8172D77D5E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8AA961D-E38A-4391-A047-C8172D77D5E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8AA961D-E38A-4391-A047-C8172D77D5E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8AA961D-E38A-4391-A047-C8172D77D5E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
