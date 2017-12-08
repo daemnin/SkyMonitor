@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyMonitor.Model", "SkyMonitor.Model\SkyMonitor.Model.csproj", "{F9C91BF9-DA22-4EDD-A8D2-DA3A21637668}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyMonitor.Data", "SkyMonitor.Data\SkyMonitor.Data.csproj", "{B8AA961D-E38A-4391-A047-C8172D77D5E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyMonitor.Business", "SkyMonitor.Business\SkyMonitor.Business.csproj", "{6F30A5AD-747D-4641-8AC9-C55DBE1EA9E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyMonitor.Commons", "SkyMonitor.Commons\SkyMonitor.Commons.csproj", "{2F92B7F3-17C8-42E9-AEB9-674F6AB29940}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{B8AA961D-E38A-4391-A047-C8172D77D5E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8AA961D-E38A-4391-A047-C8172D77D5E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8AA961D-E38A-4391-A047-C8172D77D5E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F30A5AD-747D-4641-8AC9-C55DBE1EA9E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F30A5AD-747D-4641-8AC9-C55DBE1EA9E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F30A5AD-747D-4641-8AC9-C55DBE1EA9E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F30A5AD-747D-4641-8AC9-C55DBE1EA9E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F92B7F3-17C8-42E9-AEB9-674F6AB29940}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F92B7F3-17C8-42E9-AEB9-674F6AB29940}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F92B7F3-17C8-42E9-AEB9-674F6AB29940}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F92B7F3-17C8-42E9-AEB9-674F6AB29940}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

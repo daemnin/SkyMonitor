@@ -16,13 +16,16 @@ namespace SkyMonitor.Data
         }
 
         private IRepository<User> userRepository;
-        public IRepository<User> UserRepository => userRepository?? (userRepository = new Repository<User>(context));
+        public IRepository<User> UserRepository => userRepository ?? (userRepository = new Repository<User>(context));
 
         private IRepository<Device> deviceRepository;
         public IRepository<Device> DeviceRepository => deviceRepository ?? (deviceRepository = new Repository<Device>(context));
 
         private IRepository<Location> locationRepository;
         public IRepository<Location> LocationRepository => locationRepository ?? (locationRepository = new Repository<Location>(context));
+
+        private IRepository<Alarm> alarmRepository;
+        public IRepository<Alarm> AlarmRepository => alarmRepository ?? (alarmRepository = new Repository<Alarm>(context));
 
         public void Dispose()
         {
@@ -37,7 +40,7 @@ namespace SkyMonitor.Data
         public int Save()
         {
             int changes = 0;
-            if(!disposed && context.ChangeTracker.HasChanges())
+            if (!disposed && context.ChangeTracker.HasChanges())
             {
                 changes = context.SaveChanges();
             }

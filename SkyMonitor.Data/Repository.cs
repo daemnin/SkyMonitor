@@ -38,6 +38,16 @@ namespace SkyMonitor.Data
             return entity;
         }
 
+        public IList<TEntity> Delete(Expression<Func<TEntity, bool>> predicate)
+        {
+            var entities = FindBy(predicate);
+            foreach (var entity in entities)
+            {
+                Entities.Remove(entity);
+            }
+            return entities;
+        }
+
         public IList<TEntity> FindBy(Expression<Func<TEntity, bool>> predicate, params Expression<Func<TEntity, object>>[] includes)
         {
             return Entities.IncludeMultiple(includes).Where(predicate).ToList();

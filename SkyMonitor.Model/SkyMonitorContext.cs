@@ -11,7 +11,9 @@ namespace SkyMonitor.Model
 
         public DbSet<Location> Locations { get; set; }
 
-        public SkyMonitorContext(): base("SkyMonitorContext")
+        public DbSet<Alarm> Alarms { get; set; }
+
+        public SkyMonitorContext() : base("SkyMonitorContext")
         {
         }
     }

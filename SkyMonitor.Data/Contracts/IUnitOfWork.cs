@@ -8,6 +8,7 @@ namespace SkyMonitor.Data.Contracts
         IRepository<User> UserRepository { get; }
         IRepository<Device> DeviceRepository { get; }
         IRepository<Location> LocationRepository { get; }
+        IRepository<Alarm> AlarmRepository { get; }
         int Save();
     }
 }

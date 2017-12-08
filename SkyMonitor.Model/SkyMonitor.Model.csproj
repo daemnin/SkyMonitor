@@ -58,9 +58,23 @@
     <Compile Include="Migrations\201712070923481_push_notifications_fields.Designer.cs">
       <DependentUpon>201712070923481_push_notifications_fields.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712080608049_status_to_device.cs" />
+    <Compile Include="Migrations\201712080608049_status_to_device.Designer.cs">
+      <DependentUpon>201712080608049_status_to_device.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712080640033_device_location.cs" />
+    <Compile Include="Migrations\201712080640033_device_location.Designer.cs">
+      <DependentUpon>201712080640033_device_location.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712080641017_alarms_created.cs" />
+    <Compile Include="Migrations\201712080641017_alarms_created.Designer.cs">
+      <DependentUpon>201712080641017_alarms_created.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Alarm.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SkyMonitorContext.cs" />
+    <Compile Include="StatusType.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -73,6 +87,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712070923481_push_notifications_fields.resx">
       <DependentUpon>201712070923481_push_notifications_fields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712080608049_status_to_device.resx">
+      <DependentUpon>201712080608049_status_to_device.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712080640033_device_location.resx">
+      <DependentUpon>201712080640033_device_location.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712080641017_alarms_created.resx">
+      <DependentUpon>201712080641017_alarms_created.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
