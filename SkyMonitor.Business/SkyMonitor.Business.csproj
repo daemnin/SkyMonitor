@@ -44,7 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helpers\DistanceHelper.cs" />
+    <Compile Include="Processes\AccountProcess.cs" />
     <Compile Include="Processes\AlarmProcess.cs" />
+    <Compile Include="Processes\DeviceProcess.cs" />
     <Compile Include="Processes\ProtocolProcess.cs" />
     <Compile Include="Processes\ProcessBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

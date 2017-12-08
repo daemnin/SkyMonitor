@@ -13,7 +13,7 @@ namespace SkyMonitor.Model
         public string Name { get; set; }
 
         [Required]
-        public string PhoneId { get; set; }
+        public string Phone { get; set; }
 
         public virtual ICollection<Device> Devices { get; set; }
     }

@@ -84,6 +84,16 @@ namespace SkyMonitor.Data
             return Entities.Find(id);
         }
 
+        public TEntity Read(Expression<Func<TEntity, bool>> predicate, params Expression<Func<TEntity, object>>[] includes)
+        {
+            if (includes.Any())
+            {
+                Entities.IncludeMultiple(includes).Load();
+            }
+
+            return Entities.FirstOrDefault(predicate);
+        }
+
         public TEntity Update(TEntity entity)
         {
             Entities.Attach(entity);

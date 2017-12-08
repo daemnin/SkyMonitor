@@ -9,7 +9,6 @@ namespace SkyMonitor.Business.Processes
     {
         public AlarmProcess(IUnitOfWork unitOfWork) : base(unitOfWork) { }
 
-
         public Response Activate(int deviceId)
         {
             var response = new Response();
