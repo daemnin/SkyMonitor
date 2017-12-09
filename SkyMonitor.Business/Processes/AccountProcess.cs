@@ -3,6 +3,7 @@ using SkyMonitor.Commons.Extensions;
 using SkyMonitor.Data.Contracts;
 using SkyMonitor.Model;
 using System;
+using System.Linq;
 
 namespace SkyMonitor.Business.Processes
 {
@@ -44,7 +45,21 @@ namespace SkyMonitor.Business.Processes
             {
                 var user = UnitOfWork.UserRepository.Read(id, i => i.Devices);
 
-                response.Result = user.ToToken();
+                response.Result = new
+                {
+                    user.Id,
+                    user.Phone,
+                    user.Name,
+                    Devices = user.Devices.Select(d => new
+                    {
+                        d.Id,
+                        d.Name,
+                        d.Range,
+                        d.Status,
+                        d.Latitude,
+                        d.Longitude
+                    })
+                }.ToToken();
 
                 response.Succeeded = true;
             }
