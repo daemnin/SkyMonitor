@@ -25,7 +25,7 @@ namespace SkyMonitor.API.Controllers
 
             var process = new AccountProcess(unitOfWork);
 
-            var response = process.Create(model.Name, model.Phone);
+            var response = process.Create(model.DeviceId, model.Name, model.Phone);
 
             return GetErrorResult(response) ?? Ok(new { response.Succeeded, response.Result });
         }

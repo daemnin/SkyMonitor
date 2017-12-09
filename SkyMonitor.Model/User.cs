@@ -15,6 +15,9 @@ namespace SkyMonitor.Model
         [Required]
         public string Phone { get; set; }
 
+        [Required]
+        public string DeviceId { get; set; }
+
         public virtual ICollection<Device> Devices { get; set; }
     }
 }

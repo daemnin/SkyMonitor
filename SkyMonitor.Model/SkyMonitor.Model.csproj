@@ -74,6 +74,10 @@
     <Compile Include="Migrations\201712082112140_phoneid_renamed_phone.Designer.cs">
       <DependentUpon>201712082112140_phoneid_renamed_phone.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712090800522_deviceid_added_to_user.cs" />
+    <Compile Include="Migrations\201712090800522_deviceid_added_to_user.Designer.cs">
+      <DependentUpon>201712090800522_deviceid_added_to_user.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Alarm.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -103,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712082112140_phoneid_renamed_phone.resx">
       <DependentUpon>201712082112140_phoneid_renamed_phone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712090800522_deviceid_added_to_user.resx">
+      <DependentUpon>201712090800522_deviceid_added_to_user.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

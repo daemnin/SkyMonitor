@@ -11,7 +11,7 @@ namespace SkyMonitor.Business.Processes
     {
         public AccountProcess(IUnitOfWork unitOfWork) : base(unitOfWork) { }
 
-        public Response Create(string name, string phone)
+        public Response Create(string deviceId, string name, string phone)
         {
             var response = new Response();
 
@@ -20,7 +20,8 @@ namespace SkyMonitor.Business.Processes
                 var user = new User
                 {
                     Name = name,
-                    Phone = phone
+                    Phone = phone,
+                    DeviceId = deviceId
                 };
 
                 user = UnitOfWork.UserRepository.Create(user);
