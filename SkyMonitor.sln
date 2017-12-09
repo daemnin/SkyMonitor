@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyMonitor.Business", "SkyM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyMonitor.Commons", "SkyMonitor.Commons\SkyMonitor.Commons.csproj", "{2F92B7F3-17C8-42E9-AEB9-674F6AB29940}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyMonitor.API", "SkyMonitor.API\SkyMonitor.API.csproj", "{9FBBA7B9-655E-4B01-A423-B5C322A2519C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{2F92B7F3-17C8-42E9-AEB9-674F6AB29940}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F92B7F3-17C8-42E9-AEB9-674F6AB29940}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F92B7F3-17C8-42E9-AEB9-674F6AB29940}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FBBA7B9-655E-4B01-A423-B5C322A2519C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FBBA7B9-655E-4B01-A423-B5C322A2519C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FBBA7B9-655E-4B01-A423-B5C322A2519C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FBBA7B9-655E-4B01-A423-B5C322A2519C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
