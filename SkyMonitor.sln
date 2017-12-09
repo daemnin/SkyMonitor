@@ -15,6 +15,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyMonitor.API", "SkyMonito
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{FC81C679-AE67-4BB6-BBE2-7D7B5841B2EC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Arduino", "Arduino", "{09F4E090-6637-478F-A691-3090775A2703}"
+	ProjectSection(SolutionItems) = preProject
+		Arduino\SkyMonitor.cpp = Arduino\SkyMonitor.cpp
+		Arduino\SkyMonitor.h = Arduino\SkyMonitor.h
+		Arduino\SkyMonitor.ino = Arduino\SkyMonitor.ino
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
