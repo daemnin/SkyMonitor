@@ -45,6 +45,8 @@ namespace SkyMonitor.Business.Processes
             {
                 var user = UnitOfWork.UserRepository.Read(id, i => i.Devices);
 
+                if (user == null) throw new Exception("El usuario no existe.");
+
                 response.Result = new
                 {
                     user.Id,

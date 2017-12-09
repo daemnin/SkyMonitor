@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyMonitor.Commons", "SkyMo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyMonitor.API", "SkyMonitor.API\SkyMonitor.API.csproj", "{9FBBA7B9-655E-4B01-A423-B5C322A2519C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{FC81C679-AE67-4BB6-BBE2-7D7B5841B2EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +44,13 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F9C91BF9-DA22-4EDD-A8D2-DA3A21637668} = {FC81C679-AE67-4BB6-BBE2-7D7B5841B2EC}
+		{B8AA961D-E38A-4391-A047-C8172D77D5E2} = {FC81C679-AE67-4BB6-BBE2-7D7B5841B2EC}
+		{6F30A5AD-747D-4641-8AC9-C55DBE1EA9E6} = {FC81C679-AE67-4BB6-BBE2-7D7B5841B2EC}
+		{2F92B7F3-17C8-42E9-AEB9-674F6AB29940} = {FC81C679-AE67-4BB6-BBE2-7D7B5841B2EC}
+		{9FBBA7B9-655E-4B01-A423-B5C322A2519C} = {FC81C679-AE67-4BB6-BBE2-7D7B5841B2EC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DFFF5A09-D385-4619-97B5-4AF8EFE4B859}

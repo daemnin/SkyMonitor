@@ -4,6 +4,7 @@
     {
         Disarmed = 0,
         Armed = 1,
-        Tracking = 2
+        Warning = 2,
+        Tracking = 3
     }
 }

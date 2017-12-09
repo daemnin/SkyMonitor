@@ -29,6 +29,7 @@ namespace SkyMonitor.Business.Processes
                 switch (device.Status)
                 {
                     case StatusType.Armed:
+                    case StatusType.Warning:
                         CheckBoundaries(device);
                         break;
                     case StatusType.Tracking:
@@ -57,14 +58,31 @@ namespace SkyMonitor.Business.Processes
         {
             var alarm = UnitOfWork.AlarmRepository.Read(device.Id);
 
-            var startTracking = DistanceHelper.Instance.Calculate(device.Latitude, device.Longitude, alarm.Latitude, alarm.Longitude) > device.Range;
+            var outOfRange = DistanceHelper.Instance.Calculate(device.Latitude, device.Longitude, alarm.Latitude, alarm.Longitude) > device.Range;
 
-            if (startTracking)
+            var updateStatus = outOfRange;
+
+            if (outOfRange)
             {
-                WarningOwner();
+                if (device.Status == StatusType.Warning)
+                {
+                    WarningOwner();
 
-                device.Status = StatusType.Tracking;
+                    device.Status = StatusType.Tracking;
+                }
+                else
+                {
+                    device.Status = StatusType.Warning;
+                }
+            }
+            else if (device.Status == StatusType.Warning)
+            {
+                device.Status = StatusType.Armed;
+                updateStatus = true;
+            }
 
+            if (updateStatus)
+            {
                 UnitOfWork.DeviceRepository.Update(device);
 
                 UnitOfWork.Save();

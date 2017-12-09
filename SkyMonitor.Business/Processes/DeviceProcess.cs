@@ -42,7 +42,12 @@ namespace SkyMonitor.Business.Processes
             try
             {
                 var user = UnitOfWork.UserRepository.Read(u => u.Phone.Equals(phone), u => u.Devices);
+
+                if (user == null) throw new Exception("El usuario no existe.");
+
                 var device = UnitOfWork.DeviceRepository.Read(deviceId, d => d.Users);
+
+                if (device == null) throw new Exception("El dispositivo no existe.");
 
                 user.Devices.Add(device);
 

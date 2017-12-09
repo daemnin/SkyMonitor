@@ -17,6 +17,8 @@ namespace SkyMonitor.Business.Processes
             {
                 var device = UnitOfWork.DeviceRepository.Read(deviceId);
 
+                if (device == null) throw new Exception("El dispositivo no existe.");
+
                 if (device.Status != StatusType.Disarmed) throw new Exception("La alarma no puede ser activada.");
 
                 var alarm = new Alarm
@@ -49,6 +51,8 @@ namespace SkyMonitor.Business.Processes
             try
             {
                 var device = UnitOfWork.DeviceRepository.Read(deviceId);
+
+                if (device == null) throw new Exception("El dispositivo no existe.");
 
                 if (device.Status == StatusType.Disarmed) throw new Exception("La alarma no puede ser desactivada.");
 
