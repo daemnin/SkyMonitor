@@ -5,13 +5,12 @@ using System.Web.Http;
 
 namespace SkyMonitor.API.Controllers
 {
-    [RoutePrefix("api/device/alarm")]
     public class AlarmController : ApiController
     {
         public AlarmController(IUnitOfWork unitOfWork) : base(unitOfWork) { }
 
         [HttpPost]
-        [Route(Name = "Enable")]
+        [Route("api/device/alarm/enable")]
         public IHttpActionResult Enable(AlarmModel model)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
@@ -24,7 +23,7 @@ namespace SkyMonitor.API.Controllers
         }
 
         [HttpPost]
-        [Route(Name = "Disable")]
+        [Route("api/device/alarm/disable")]
         public IHttpActionResult Disable(AlarmModel model)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
