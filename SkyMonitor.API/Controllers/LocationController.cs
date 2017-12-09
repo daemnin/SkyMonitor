@@ -2,7 +2,7 @@
 using SkyMonitor.Commons.Entities;
 using SkyMonitor.Commons.Extensions;
 using SkyMonitor.Data.Contracts;
-using System.IO;
+using System.Web.Http;
 
 namespace SkyMonitor.API.Controllers
 {
@@ -10,11 +10,14 @@ namespace SkyMonitor.API.Controllers
     {
         public LocationController(IUnitOfWork unitOfWork) : base(unitOfWork) { }
 
-        public void Post(MemoryStream stream)
+        [HttpPost]
+        public async void Post()
         {
             try
             {
-                Packet packet = stream.Parse();
+                var buffer = await Request.Content.ReadAsByteArrayAsync();
+
+                Packet packet = buffer.Parse();
 
                 var process = new ProtocolProcess(unitOfWork);
 

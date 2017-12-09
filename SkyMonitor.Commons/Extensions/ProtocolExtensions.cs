@@ -1,6 +1,5 @@
 ﻿using SkyMonitor.Commons.Entities;
 using System;
-using System.IO;
 
 namespace SkyMonitor.Commons.Extensions
 {
@@ -10,9 +9,8 @@ namespace SkyMonitor.Commons.Extensions
         private const byte LONGITUDE_OFFSET = 4;
         private const byte DEVICE_ID_OFFSET = 8;
 
-        public static Packet Parse(this MemoryStream stream)
+        public static Packet Parse(this byte[] buffer)
         {
-            byte[] buffer = stream.GetBuffer();
             var packet = new Packet
             {
                 Location = new Location
