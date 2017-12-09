@@ -2,6 +2,7 @@
 using SkyMonitor.Commons.Entities;
 using SkyMonitor.Data.Contracts;
 using SkyMonitor.Model;
+using System.Linq;
 using Location = SkyMonitor.Model.Location;
 
 namespace SkyMonitor.Business.Processes
@@ -66,7 +67,7 @@ namespace SkyMonitor.Business.Processes
             {
                 if (device.Status == StatusType.Warning)
                 {
-                    WarningOwner();
+                    WarnOwners(device.Id);
 
                     device.Status = StatusType.Tracking;
                 }
@@ -89,9 +90,14 @@ namespace SkyMonitor.Business.Processes
             }
         }
 
-        private void WarningOwner()
+        private void WarnOwners(int deviceId)
         {
-            //TODO: avisar al dueño
+            var device = UnitOfWork.DeviceRepository.Read(deviceId, i => i.Users);
+
+            foreach (var owner in device.Users.Select(u => u.DeviceId))
+            {
+                PushNotificationsHelper.SendNotification("SkyMonitor requiere de tu atención", $"Se ha detectado que el vehículo {device.Name} se encuentra en movimiento.", owner);
+            }
         }
     }
 }

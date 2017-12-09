@@ -34,6 +34,7 @@
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -43,7 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configs\Constants.cs" />
     <Compile Include="Helpers\DistanceHelper.cs" />
+    <Compile Include="Helpers\PushNotificationsHelper.cs" />
     <Compile Include="Processes\AccountProcess.cs" />
     <Compile Include="Processes\AlarmProcess.cs" />
     <Compile Include="Processes\DeviceProcess.cs" />
