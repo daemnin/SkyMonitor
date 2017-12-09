@@ -9,6 +9,16 @@ namespace SkyMonitor.API.Controllers
     {
         public AccountController(IUnitOfWork unitOfWork) : base(unitOfWork) { }
 
+
+        public IHttpActionResult Get(int id)
+        {
+            var process = new AccountProcess(unitOfWork);
+
+            var response = process.Get(id);
+
+            return GetErrorResult(response) ?? Ok(new { response.Succeeded, response.Result });
+        }
+
         public IHttpActionResult Post(UserModel model)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
@@ -17,7 +27,7 @@ namespace SkyMonitor.API.Controllers
 
             var response = process.Create(model.Name, model.Phone);
 
-            return GetErrorResult(response) ?? Ok(new { Succeeded = response.Succeeded, Result = response.Result });
+            return GetErrorResult(response) ?? Ok(new { response.Succeeded, response.Result });
         }
     }
 }

@@ -35,5 +35,25 @@ namespace SkyMonitor.Business.Processes
 
             return response;
         }
+
+        public Response Get(int id)
+        {
+            var response = new Response();
+
+            try
+            {
+                var user = UnitOfWork.UserRepository.Read(id, i => i.Devices);
+
+                response.Result = user.ToToken();
+
+                response.Succeeded = true;
+            }
+            catch (Exception ex)
+            {
+                FillErrors(ex, response);
+            }
+
+            return response;
+        }
     }
 }
