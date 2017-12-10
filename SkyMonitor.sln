@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2006
+VisualStudioVersion = 15.0.27004.2008
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyMonitor.Model", "SkyMonitor.Model\SkyMonitor.Model.csproj", "{F9C91BF9-DA22-4EDD-A8D2-DA3A21637668}"
 EndProject
@@ -17,9 +17,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{FC81C679-AE6
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Arduino", "Arduino", "{09F4E090-6637-478F-A691-3090775A2703}"
 	ProjectSection(SolutionItems) = preProject
-		Arduino\SkyMonitor.cpp = Arduino\SkyMonitor.cpp
-		Arduino\SkyMonitor.h = Arduino\SkyMonitor.h
-		Arduino\SkyMonitor.ino = Arduino\SkyMonitor.ino
+		Arduino\SkyMonitor\SkyMonitor.cpp = Arduino\SkyMonitor\SkyMonitor.cpp
+		Arduino\SkyMonitor\SkyMonitor.h = Arduino\SkyMonitor\SkyMonitor.h
+		Arduino\SkyMonitor\SkyMonitor.ino = Arduino\SkyMonitor\SkyMonitor.ino
 	EndProjectSection
 EndProject
 Global

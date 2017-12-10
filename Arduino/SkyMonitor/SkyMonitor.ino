@@ -3,9 +3,9 @@
 #include "SkyMonitor.h"
 
 packet_t pkt;
-location_t *location = &pkt.location;
+location_t *location = &pkt.device.location;
 
-SoftwareSerial gpsSignal(GPS_RX, GPS_TX); // recibimos señal de gps, puerto 5 RX y puerto 4 TX
+SoftwareSerial gpsSignal(GPS_TX, GPS_RX); // recibimos señal de gps, puerto 5 RX y puerto 4 TX
 TinyGPS gps;
 
 void setup()
@@ -13,6 +13,7 @@ void setup()
   Serial.begin(SERIAL_BAUD_RATE);
   gpsSignal.begin(SS_BAUD_RATE); //cambiamos la velocidad de lectura del puerto serie emulando a 9600 baudios
   Serial.println(VERSION);
+  pkt.device.id = DEVICE_ID;
 }
 
 
@@ -20,7 +21,6 @@ void loop()
 {
   if (gpsSignal.available())
   {
-    Serial.println("GPS available...");
     if (gps.encode(gpsSignal.read())) // encode gps data
     {
       Serial.println("Reading GPS...");
